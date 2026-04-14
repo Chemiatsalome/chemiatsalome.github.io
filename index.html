@@ -1,85 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Salome Chemiat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salome Chemiat | AI Researcher</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="site-shell">
+        <div class="page-grid">
+            <aside class="sidebar">
+                <h1>Salome Chemiat</h1>
+                <p class="role">AI Researcher</p>
+                <nav class="sidebar-nav" aria-label="Primary">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="cv.html">CV</a>
+                </nav>
+                <ul class="contact-list">
+                    <li><a href="mailto:schemiat@strathmore.edu">Email</a></li>
+                    <li><a href="https://github.com/Chemiatsalome">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a></li>
+                    <li><a href="https://orcid.org/0009-0006-5871-4366">ORCID</a></li>
+                </ul>
+            </aside>
+            <main class="content">
+                <section class="hero">
+                    <p class="eyebrow">Home</p>
+                    <h1>AI Researcher | Neuro-symbolic AI | RAG Systems | AI Safety</h1>
+                    <p class="lead">
+                        I study how language model systems can become more reliable in high-stakes settings through utility-aware retrieval, safety constraints, and explicit reasoning structure.
+                        My work combines retrieval-augmented generation, neuro-symbolic modeling, and robust evaluation under real-world deployment constraints.
+                    </p>
+                    <p class="research-question">
+                        <strong>Core research question:</strong> How can AI systems move beyond semantic similarity toward utility-aware and safety-constrained reasoning?
+                    </p>
+                </section>
 
-<!-- TOP NAV -->
-<div class="topbar">
-    <div class="topbar-inner">
-        <div class="logo">SALOME CHEMIAT</div>
-        <div class="menu">
-            <a href="index.html">HOME</a>
-            <a href="research.html">RESEARCH</a>
-            <a href="teaching.html">TEACHING</a>
-            <a href="cv.html">CV</a>
+                <section>
+                    <h2>Short Bio</h2>
+                    <p>
+                        I hold an MSc in Information Technology (Distinction), with current research centered on LLM and RAG systems for maternal health decision support.
+                        My work analyzes failure modes including hallucination and reasoning inconsistency, and develops mitigation approaches based on symbolic constraints and retrieval redesign.
+                    </p>
+                    <p>
+                        I also bring distributed systems experience to model evaluation and deployment, with a strong emphasis on reproducibility, reliability, and AI safety in constrained environments.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Research Snapshot</h2>
+                    <div class="section-card">
+                        <p>
+                            My research investigates why similarity-based retrieval often fails in clinical and high-risk tasks where the most semantically similar context is not always the safest or most useful.
+                            I design neuro-symbolic, utility-driven retrieval pipelines that enforce safety constraints and improve decision quality.
+                        </p>
+                        <p>
+                            Current work focuses on maternal health applications and broader methods for reliable retrieval and generation in distributed AI systems.
+                            <a href="research.html">Read full research statement and projects.</a>
+                        </p>
+                    </div>
+                </section>
+
+                <p class="footer-note">Academic website for research, teaching, and doctoral applications.</p>
+            </main>
         </div>
     </div>
-</div>
-
-<!-- MAIN LAYOUT -->
-<div class="container">
-
-    <!-- LEFT COLUMN -->
-    <div class="sidebar">
-        <img src="profile.jpg" class="profile-img">
-
-        <h2>Salome<br>Chemiat</h2>
-
-        <p class="sidebar-links">
-            📧 <a href="mailto:schemiat@strathmore.edu">Email</a><br>
-            💻 <a href="https://github.com/Chemiatsalome">GitHub</a><br>
-            🔗 <a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a>
-        </p>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="content">
-
-        <p class="intro">
-            Hello! I am an early-stage researcher in Natural Language Processing, focusing on Retrieval-Augmented Generation (RAG) and Neurosymbolic AI.
-        </p>
-
-        <p>
-            <strong>Research focus:</strong> Improving retrieval beyond semantic similarity.
-        </p>
-
-        <p>
-            How can AI systems move from retrieving similar information to retrieving useful, safe, and context-aware knowledge?
-        </p>
-
-        <h2>About</h2>
-        <p>
-            My work explores the limitations of similarity-based retrieval and investigates how combining neural methods with symbolic reasoning can improve reliability in high-stakes domains such as healthcare.
-        </p>
-
-        <h2>Research</h2>
-
-        <h3>Neurosymbolic RAG Prototype</h3>
-        <p>
-            Explores how retrieval systems can move beyond semantic similarity by integrating symbolic filtering and utility-based ranking.
-        </p>
-
-        <p>
-            <a href="https://github.com/Chemiatsalome/neurosymbolic-rag-demo">→ View Project</a>
-        </p>
-
-        <h3>Alzheimer’s Predictive System</h3>
-        <p>
-            A lightweight predictive system using decision trees to support early-stage awareness of cognitive decline.
-        </p>
-
-        <h2>Research Statement</h2>
-        <p>
-            My research aims to develop retrieval systems that are not only semantically accurate, but also context-aware, interpretable, and useful in real-world decision-making.
-        </p>
-
-    </div>
-
-</div>
-
 </body>
 </html>

@@ -1,63 +1,124 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | Salome Chemiat</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="site-shell">
+        <div class="page-grid">
+            <aside class="sidebar">
+                <h1>Salome Chemiat</h1>
+                <p class="role">AI Researcher</p>
+                <nav class="sidebar-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a class="active" href="research.html">Research</a>
+                    <a href="teaching.html">Teaching</a>
+                    <a href="cv.html">CV</a>
+                </nav>
+                <ul class="contact-list">
+                    <li><a href="mailto:schemiat@strathmore.edu">Email</a></li>
+                    <li><a href="https://github.com/Chemiatsalome">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a></li>
+                    <li><a href="https://orcid.org/0009-0006-5871-4366">ORCID</a></li>
+                </ul>
+            </aside>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="cv.html">CV</a>
-</nav>
+            <main class="content">
+                <section class="hero">
+                    <p class="eyebrow">Research</p>
+                    <h1>Research Statement</h1>
+                    <p class="lead">
+                        Similarity-based retrieval has become a default design choice in LLM systems, but this assumption breaks down in high-stakes decision environments.
+                        In maternal and clinical contexts, retrieving semantically similar text does not guarantee actionable, safe, or context-valid guidance.
+                    </p>
+                    <p>
+                        My research addresses this gap by combining utility-driven retrieval objectives with neuro-symbolic reasoning and explicit safety constraints.
+                        The goal is to build systems that can justify retrieval choices, reduce hallucinations, and maintain reliability under real-world uncertainty.
+                    </p>
+                </section>
 
-<h1>Research</h1>
+                <section>
+                    <h2>Research Interests</h2>
+                    <ul class="inline-list">
+                        <li>Neuro-symbolic AI</li>
+                        <li>Retrieval-Augmented Generation systems</li>
+                        <li>AI Safety and Alignment</li>
+                        <li>LLM robustness and hallucination mitigation</li>
+                        <li>Distributed AI systems</li>
+                        <li>High-stakes decision AI</li>
+                    </ul>
+                </section>
 
-<h2>Research Interests</h2>
-<ul>
-    <li>Retrieval-Augmented Generation (RAG)</li>
-    <li>Utility-aware retrieval</li>
-    <li>Neurosymbolic AI</li>
-    <li>Natural Language Processing</li>
-    <li>AI for healthcare</li>
-</ul>
+                <section>
+                    <h2>Selected Projects</h2>
 
-<h2>Projects</h2>
+                    <article class="section-card highlight-card">
+                        <h3>FLAGSHIP: Neuro-symbolic RAG System</h3>
+                        <p>
+                            A research system that replaces purely similarity-based retrieval with utility-driven evidence selection.
+                            It integrates graph-based retrieval reasoning and symbolic safety constraints to improve output validity in maternal health decision support.
+                        </p>
+                        <p class="meta">
+                            Tech stack: Python, Flask, LLaMA, vector retrieval, symbolic rules, graph-based reasoning.
+                            <a href="https://github.com/Chemiatsalome/neurosymbolic-rag-demo">GitHub</a>
+                        </p>
+                    </article>
 
-<div class="project">
-    <h3>Neurosymbolic RAG Prototype</h3>
-    <ul>
-        <li>Challenges similarity-based retrieval</li>
-        <li>Introduces symbolic filtering + utility ranking</li>
-        <li>Focus on maternal health decision-support</li>
-    </ul>
-    <p>
-        <a href="https://github.com/Chemiatsalome/neurosymbolic-rag-demo">View Project</a>
-    </p>
-</div>
+                    <article class="section-card">
+                        <h3>Maternal Health AI Assistant</h3>
+                        <p>
+                            Developed a retrieval-augmented clinical assistant using Flask and LLaMA, then performed grounding and hallucination analysis under varying retrieval conditions.
+                            The work identifies failure pathways in medically sensitive prompts and proposes mitigation strategies.
+                        </p>
+                        <p class="meta">
+                            Tech stack: Flask, LLaMA, RAG pipeline, evaluation scripts.
+                            <a href="https://github.com/Chemiatsalome">GitHub</a>
+                        </p>
+                    </article>
 
-<div class="project">
-    <h3>Alzheimer’s Predictive System</h3>
-    <ul>
-        <li>Decision tree-based prediction</li>
-        <li>Interactive web system</li>
-        <li>Early-stage awareness</li>
-    </ul>
-</div>
+                    <article class="section-card">
+                        <h3>Maternal Health Education Platform</h3>
+                        <p>
+                            Designed and implemented a web-based education system to support maternal and neonatal health literacy with structured content pathways and interactive guidance.
+                            The project informs user-centered evaluation for future intelligent assistants.
+                        </p>
+                        <p class="meta">
+                            Tech stack: Web application stack, educational content delivery workflows.
+                            <a href="https://github.com/Chemiatsalome">GitHub</a>
+                        </p>
+                    </article>
 
-<h2>Research Statement</h2>
+                    <article class="section-card">
+                        <h3>Alzheimer's Prediction System</h3>
+                        <p>
+                            Built a machine learning classification system for early risk indication and interpretation of relevant patient features.
+                            The project emphasized robust preprocessing and transparent performance evaluation.
+                        </p>
+                        <p class="meta">
+                            Tech stack: Python, scikit-learn, data preprocessing, model evaluation.
+                            <a href="https://github.com/Chemiatsalome">GitHub</a>
+                        </p>
+                    </article>
 
-<p>
-My research investigates how retrieval systems can move beyond semantic similarity toward <span class="highlight">utility-aware, context-sensitive, and interpretable reasoning</span>.
-</p>
+                    <article class="section-card">
+                        <h3>Intelligent Tutoring System (Hackathon)</h3>
+                        <p>
+                            Prototyped an adaptive tutoring system that personalized hints and sequence progression based on learner responses.
+                            The system explored lightweight decision logic for low-resource deployment settings.
+                        </p>
+                        <p class="meta">
+                            Tech stack: Python, lightweight recommendation logic, web prototype.
+                            <a href="https://github.com/Chemiatsalome">GitHub</a>
+                        </p>
+                    </article>
+                </section>
 
-<p>
-I aim to develop neurosymbolic approaches that improve the reliability of AI systems, particularly in high-stakes domains where incorrect information can have serious consequences.
-</p>
-
+                <p class="footer-note">Current emphasis: reliable retrieval, symbolic constraints, and safe LLM deployment in healthcare-adjacent systems.</p>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
