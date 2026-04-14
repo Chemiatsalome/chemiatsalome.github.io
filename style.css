@@ -1,1 +1,75 @@
 
+body {
+    font-family: "Georgia", serif;
+    max-width: 900px;
+    margin: 40px auto;
+    line-height: 1.7;
+    color: #222;
+    background-color: #fdfdfd;
+}
+
+nav {
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #1a73e8;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 25px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #666;
+}
+
+.links a {
+    margin-right: 12px;
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.project {
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: #1a73e8;
+    font-weight: bold;
+}
