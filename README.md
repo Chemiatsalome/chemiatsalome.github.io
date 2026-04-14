@@ -1,4 +1,3 @@
-# Salome Chemiat
 
 MSc Computer Science (Distinction)  
 Research interests: Natural Language Processing, Retrieval-Augmented Generation (RAG), Neurosymbolic AI, AI for Health  
