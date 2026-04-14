@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="top-header">
+        <div class="top-header-inner">
+            <div class="site-mark">Salome Chemiat</div>
+            <nav class="top-links" aria-label="Top navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="research.html">Research</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="cv.html">CV</a>
+            </nav>
+        </div>
+        <div class="accent-line"></div>
+    </header>
     <div class="site-shell">
         <div class="page-grid">
             <aside class="sidebar">
+                <div class="profile-wrap">
+                    <img class="profile-photo" src="profile.jpg" alt="Portrait of Salome Chemiat">
+                </div>
                 <h1>Salome Chemiat</h1>
                 <p class="role">AI Researcher</p>
                 <nav class="sidebar-nav" aria-label="Primary">
@@ -19,10 +34,10 @@
                     <a href="cv.html">CV</a>
                 </nav>
                 <ul class="contact-list">
-                    <li><a href="mailto:schemiat@strathmore.edu">Email</a></li>
-                    <li><a href="https://github.com/Chemiatsalome">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a></li>
-                    <li><a href="https://orcid.org/0009-0006-5871-4366">ORCID</a></li>
+                    <li><a href="mailto:schemiat@strathmore.edu"><span class="icon">@</span>Email</a></li>
+                    <li><a href="https://github.com/Chemiatsalome"><span class="icon">GH</span>GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/salome-chemiat"><span class="icon">in</span>LinkedIn</a></li>
+                    <li><a href="https://orcid.org/0009-0006-5871-4366"><span class="icon">ID</span>ORCID</a></li>
                 </ul>
             </aside>
 
@@ -56,7 +71,10 @@
                     <h2>Selected Projects</h2>
 
                     <article class="section-card highlight-card">
-                        <h3>FLAGSHIP: Neuro-symbolic RAG System</h3>
+                        <div class="flagship-header">
+                            <h3>Neuro-symbolic RAG System</h3>
+                            <span class="flagship-badge">Flagship Project</span>
+                        </div>
                         <p>
                             A research system that replaces purely similarity-based retrieval with utility-driven evidence selection.
                             It integrates graph-based retrieval reasoning and symbolic safety constraints to improve output validity in maternal health decision support.
@@ -114,6 +132,16 @@
                             <a href="https://github.com/Chemiatsalome">GitHub</a>
                         </p>
                     </article>
+                </section>
+
+                <section>
+                    <h2>Selected Publication</h2>
+                    <ul class="pub-list">
+                        <li>
+                            <strong>An Adaptive Game-Based Educational Tool for Maternal and Neonatal Health</strong><br>
+                            ICETT 2025, Seoul (2026)
+                        </li>
+                    </ul>
                 </section>
 
                 <p class="footer-note">Current emphasis: reliable retrieval, symbolic constraints, and safe LLM deployment in healthcare-adjacent systems.</p>
