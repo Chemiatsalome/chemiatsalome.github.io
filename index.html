@@ -1,151 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Salome Chemiat</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<!-- NAV -->
-<header class="topbar">
+<div class="topbar">
     <div class="topbar-inner">
         <div class="logo">SALOME CHEMIAT</div>
-        <nav class="menu">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
+        <div class="menu">
+            <a href="index.html">HOME</a>
+            <a href="research.html">RESEARCH</a>
+            <a href="teaching.html">TEACHING</a>
             <a href="cv.html">CV</a>
-        </nav>
+        </div>
     </div>
-</header>
+</div>
 
-<div class="layout">
+<div class="container">
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-    <img src="profile.jpg" class="profile-img" alt="Profile Photo">
+<div class="sidebar">
+    <img src="profile.jpg" class="profile-img">
 
     <h2>Salome<br>Chemiat</h2>
 
-    <p class="role">AI Researcher • NLP • RAG Systems • Neurosymbolic AI</p>
+    <p class="sidebar-links">
+        📧 <a href="mailto:schemiat@strathmore.edu">Email</a><br>
+        🔗 <a href="https://github.com/Chemiatsalome">GitHub</a><br>
+        💼 <a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a><br>
+        🧾 <a href="https://orcid.org/0009-0006-5871-4366">ORCID</a>
+    </p>
+</div>
 
-    <div class="sidebar-links">
-        <a href="mailto:schemiat@strathmore.edu">Email</a><br>
-        <a href="https://github.com/Chemiatsalome">GitHub</a><br>
-        <a href="https://www.linkedin.com/in/salome-chemiat">LinkedIn</a><br>
-        <a href="https://orcid.org/0009-0006-5871-4366">ORCID</a>
-    </div>
-</aside>
+<div class="content">
 
-<!-- MAIN -->
-<main class="content">
+<p class="intro">
+I am an AI researcher focused on improving the reliability of large language model systems in high-stakes domains.
+</p>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Hi, I’m Salome Chemiat</h1>
+<p><strong>Research focus:</strong> Moving beyond semantic similarity toward utility-aware and safety-driven retrieval in RAG systems.</p>
 
-        <p class="subtitle">
-            I research how to make AI systems more <strong>reliable, safe, and context-aware</strong>,
-            especially in high-stakes domains like healthcare.
-        </p>
+<p class="question">
+How can AI systems move from retrieving similar information to retrieving <strong>useful, safe, and context-aware knowledge</strong>?
+</p>
 
-        <p class="highlight-question">
-            How can AI move from retrieving <em>similar information</em> to retrieving <strong>useful and safe knowledge</strong>?
-        </p>
-    </section>
+<h2>About</h2>
+<p>
+My work sits at the intersection of Natural Language Processing, Retrieval-Augmented Generation (RAG), and Neurosymbolic AI. I investigate how retrieval systems can fail in subtle but critical ways—particularly when semantic similarity does not align with real-world usefulness.
+</p>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About</h2>
-        <p>
-            My work focuses on Retrieval-Augmented Generation (RAG), Natural Language Processing,
-            and Neurosymbolic AI. I study how current retrieval systems fail when semantic similarity
-            does not match real-world utility.
-        </p>
+<p>
+I am especially interested in high-stakes applications such as healthcare, where incorrect or misleading outputs can have serious consequences. My research focuses on failure-mode analysis, robustness, and the integration of symbolic reasoning to improve system reliability.
+</p>
 
-        <p>
-            I am particularly interested in healthcare AI systems, where incorrect outputs can have
-            serious consequences. My research explores robustness, failure-mode analysis, and symbolic
-            reasoning as a corrective layer for neural systems.
-        </p>
-    </section>
+<h2>Publications</h2>
+<ul>
+    <li>
+        <strong>An Adaptive Game-Based Educational Tool for Maternal and Neonatal Health</strong><br>
+        ICETT 2025, Seoul, South Korea (2026)
+    </li>
+</ul>
 
-    <!-- PUBLICATIONS -->
-    <section>
-        <h2>Publications</h2>
-        <div class="card">
-            <h3>An Adaptive Game-Based Educational Tool for Maternal and Neonatal Health</h3>
-            <p>ICETT 2025, Seoul, South Korea (2026)</p>
-        </div>
-    </section>
+<h2>Selected Research Projects</h2>
 
-    <!-- RESEARCH PROJECTS -->
-    <section>
-        <h2>Selected Research Projects</h2>
+<div class="project">
+    <h3>Neurosymbolic RAG Prototype</h3>
+    <p>
+        A research prototype exploring the gap between semantic similarity and real-world usefulness in retrieval systems.
+    </p>
+    <ul>
+        <li>Symbolic filtering for safety constraints</li>
+        <li>Utility-based ranking beyond embeddings</li>
+        <li>Maternal health decision-support use case</li>
+    </ul>
+    <a href="https://github.com/Chemiatsalome/neurosymbolic-rag-demo">→ View Project</a>
+</div>
 
-        <div class="card featured">
-            <h3>Neurosymbolic RAG Prototype (Flagship)</h3>
-            <ul>
-                <li>Challenges assumption that similarity = usefulness</li>
-                <li>Introduces symbolic filtering + utility-aware ranking</li>
-                <li>Designed for high-stakes healthcare decision support</li>
-            </ul>
-            <a href="https://github.com/NeuroSymbolic-AI-Lab/neurosymbolic-rag-demo">View Project →</a>
-        </div>
+<div class="project">
+    <h3>LLM Failure Analysis in Health Systems</h3>
+    <p>
+        Investigates hallucinations, reasoning inconsistencies, and sensitivity to data quality in deployed LLM systems.
+    </p>
+</div>
 
-        <div class="card">
-            <h3>Maternal Health AI Assistant</h3>
-            <p>LLM-based Q&A system exploring grounding and safety limitations in healthcare AI.</p>
-            <a href="https://github.com/Chemiatsalome/maternal-health-education-assistant">View →</a>
-        </div>
+<h2>Teaching</h2>
+<p><strong>Teaching Fellow – Strathmore University</strong></p>
 
-        <div class="card">
-            <h3>Maternal Health Education System</h3>
-            <p>Web-based structured learning platform for maternal and neonatal education.</p>
-            <a href="https://github.com/Chemiatsalome/maternal-health-education-delivery-app">View →</a>
-        </div>
+<ul>
+    <li>Data Structures & Algorithms (4+ classes, 40+ students each)</li>
+    <li>APIs & Backend Systems</li>
+    <li>Mobile Development (Android & iOS)</li>
+</ul>
 
-        <div class="card">
-            <h3>Alzheimer’s Predictive System</h3>
-            <p>Decision-tree based early risk detection prototype with interactive interface.</p>
-            <a href="https://github.com/Chemiatsalome/alzheimers-predictive-game">View →</a>
-        </div>
+<p><strong>Apple-Certified iOS Instructor</strong></p>
 
-        <div class="card">
-            <h3>Intelligent Tutoring System</h3>
-            <p>Adaptive learning platform built during collaborative hackathon development.</p>
-            <a href="https://github.com/Chemiatsalome/intelligent-tutoring-system">View →</a>
-        </div>
-    </section>
+<h3>Student Feedback</h3>
 
-    <!-- TEACHING -->
-    <section>
-        <h2>Teaching</h2>
+<blockquote>
+"Your class prepared me perfectly for my API testing role. Much appreciated!"
+</blockquote>
 
-        <div class="card">
-            <h3>Teaching Fellow – Strathmore University</h3>
-            <ul>
-                <li>Data Structures & Algorithms</li>
-                <li>APIs & Backend Systems</li>
-                <li>Mobile Development (Android & iOS)</li>
-            </ul>
-        </div>
+<blockquote>
+"I’m now confident I can build a mobile app. Thank you for the excellent teaching."
+</blockquote>
 
-        <div class="card">
-            <h3>Student Feedback</h3>
-            <blockquote>
-                "Your class prepared me perfectly for my API testing role."
-            </blockquote>
-            <blockquote>
-                "I can now confidently build mobile apps."
-            </blockquote>
-        </div>
-    </section>
+</div>
 
-</main>
 </div>
 
 </body>
