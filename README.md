@@ -7,20 +7,30 @@ Research interests: Natural Language Processing, Retrieval-Augmented Generation 
 
 ## About
 
-I am a computer science graduate with a strong interest in developing AI systems that move beyond pattern matching toward more reliable and interpretable reasoning.
+I am a computer science graduate and early-stage researcher interested in developing AI systems that move beyond pattern matching toward more reliable, interpretable, and context-aware reasoning.
 
-My work focuses on improving retrieval-augmented generation systems by addressing a key limitation: semantic similarity does not always correspond to useful or appropriate responses, especially in high-stakes domains such as healthcare.
+My current work focuses on retrieval-augmented generation (RAG), particularly on addressing a key limitation: semantic similarity does not always correspond to useful or appropriate responses. This is especially critical in high-stakes domains such as healthcare.
 
 ---
 
-## Research
+## Research Interests
+
+- Retrieval-Augmented Generation (RAG)  
+- Utility-aware and context-sensitive retrieval  
+- Neurosymbolic AI  
+- Natural Language Processing (NLP)  
+- AI for high-stakes domains (e.g., healthcare)  
+
+---
+
+## Research Projects
 
 ### Neurosymbolic RAG Prototype
-- Explores limitations of similarity-based retrieval in RAG systems  
+- Investigates limitations of similarity-based retrieval in RAG systems  
 - Introduces symbolic filtering and utility-based ranking  
-- Focus on maternal health decision-support scenarios  
+- Focused on maternal health decision-support scenarios  
 
-🔗 [View Project](https://github.com/yourusername/neurosymbolic-rag)
+🔗 [View Project](https://github.com/Chemiatsalome/neurosymbolic-rag-demo)
 
 ---
 
@@ -29,26 +39,34 @@ My work focuses on improving retrieval-augmented generation systems by addressin
 - Interactive web-based prototype  
 - Focus on early-stage risk awareness  
 
-🔗 [View Project](https://github.com/yourusername/alzheimers-project)
+🔗 [View Project](https://github.com/Chemiatsalome/alzheimers-predictive-game.git)
 
 ---
 
-## Experience
+## Research Statement
+
+My research aims to improve retrieval mechanisms in AI systems by moving beyond semantic similarity toward utility-aware, interpretable, and context-sensitive approaches.
+
+I am particularly interested in integrating neural retrieval with symbolic reasoning to improve the reliability of AI systems in high-stakes domains such as healthcare.
+
+---
+
+## Teaching
 
 **Teaching Fellow – Strathmore University**  
-- Teaching core computer science units (APIs, Data Structures, Mobile Development)  
-- Supporting students in understanding complex technical concepts  
+- Teaching core computer science units including APIs, Data Structures, and Mobile Development  
+- Supporting students in understanding complex technical concepts through structured explanations  
 
 ---
 
 ## CV
 
-📄 [Download CV](link-to-your-cv.pdf)
+📄 [Download CV](#)
 
 ---
 
 ## Contact
 
-- Email: your-email@example.com  
-- GitHub: https://github.com/yourusername  
-- LinkedIn: your-linkedin  
+- Email: schemiat@strathmore.edu  
+- GitHub: https://github.com/Chemiatsalome  
+- LinkedIn: https://www.linkedin.com/in/salome-chemiat  
