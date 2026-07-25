@@ -84,7 +84,7 @@
             </nav>
 
             <ul class="contact-list">
-                <li><a href="mailto:schemiat@strathmore.edu"><span class="icon">@</span>Email</a></li>
+                <li><a href="#" id="email-link"><span class="icon">@</span>Email</a></li>
                 <li><a href="https://github.com/Chemiatsalome"><span class="icon">GH</span>GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/salome-chemiat"><span class="icon">in</span>LinkedIn</a></li>
                 <li><a href="https://orcid.org/0009-0006-5871-4366"><span class="icon">ID</span>ORCID</a></li>
@@ -188,6 +188,15 @@
         </main>
     </div>
 </div>
-
+<script>
+  (function () {
+    var u = "schemiat";
+    var d = "strathmore.edu";
+    var link = document.getElementById("email-link");
+    if (link) {
+      link.href = "mailto:" + u + "@" + d;
+    }
+  })();
+</script>
 </body>
 </html>
