@@ -1,13 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+/* =========================================================
+   Palette: "Ink & Bougainvillea"
+   Deep plum ink, raspberry accent, brass-gold detail,
+   blush paper background. Colorful, feminine, strict.
+   ========================================================= */
 
 :root {
-    --bg: #f4f6f8;
+    --bg: #faf6f5;            /* blush paper */
     --panel: #ffffff;
-    --text: #0f172a;
-    --muted: #475569;
-    --accent: #0b7c83;
-    --accent-soft: #e7f5f6;
-    --line: #d7dee7;
+    --text: #29141f;          /* plum-black ink */
+    --muted: #6d5461;
+    --accent: #8f1d55;        /* deep raspberry-plum: primary */
+    --accent-deep: #661239;   /* hover / active */
+    --gold: #b07a1f;          /* brass-gold: secondary detail */
+    --accent-soft: #f7e3ec;   /* rose wash */
+    --gold-soft: #f6ecda;     /* gold wash */
+    --line: #e8d6dc;          /* rose hairline */
     --max-width: 1200px;
 }
 
@@ -25,14 +34,25 @@ html, body {
 }
 
 a {
-    color: #0b5fa5;
+    color: var(--accent);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.18s ease;
 }
 
 a:hover {
-    color: #084a81;
+    color: var(--accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
 }
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ---------- Header ---------- */
 
 .top-header {
     background: var(--panel);
@@ -50,11 +70,11 @@ a:hover {
 }
 
 .site-mark {
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: #1f2937;
-    text-transform: uppercase;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
 }
 
 .top-links {
@@ -64,22 +84,35 @@ a:hover {
 }
 
 .top-links a {
-    color: #374151;
-    font-size: 0.88rem;
+    color: var(--muted);
+    font-size: 0.86rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .top-links a.active,
 .top-links a:hover {
     color: var(--accent);
+    text-decoration: none;
 }
 
+.top-links a.active {
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+}
+
+/* Signature: two-voice ribbon — plum into gold */
 .accent-line {
     height: 4px;
-    background: var(--accent);
+    background: linear-gradient(90deg,
+        var(--accent-deep) 0%,
+        var(--accent) 42%,
+        #c94f77 68%,
+        var(--gold) 100%);
 }
+
+/* ---------- Shell & grid ---------- */
 
 .site-shell {
     max-width: var(--max-width);
@@ -93,11 +126,13 @@ a:hover {
     gap: 52px;
 }
 
+/* ---------- Sidebar ---------- */
+
 .sidebar {
     position: sticky;
     top: 28px;
     align-self: start;
-    border: 1px solid #d9e0e8;
+    border: 1px solid var(--line);
     background: var(--panel);
     border-radius: 14px;
     padding: 24px 22px;
@@ -112,16 +147,19 @@ a:hover {
     height: 126px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #dbe4ea;
+    border: 3px solid var(--accent-soft);
+    outline: 1px solid var(--gold);
+    outline-offset: 3px;
     display: block;
 }
 
 .sidebar h1 {
     margin: 0 0 6px;
-    font-family: "Merriweather", Georgia, "Times New Roman", serif;
-    font-size: 2rem;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-size: 1.9rem;
     font-weight: 700;
     line-height: 1.2;
+    color: var(--text);
 }
 
 .sidebar .role {
@@ -148,7 +186,13 @@ a:hover {
 .sidebar-nav a:hover,
 .sidebar-nav a.active {
     background: var(--accent-soft);
-    color: #0a5952;
+    color: var(--accent-deep);
+    text-decoration: none;
+}
+
+.sidebar-nav a.active {
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
 }
 
 .contact-list {
@@ -170,14 +214,17 @@ a:hover {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    border: 1px solid #c3ced9;
-    color: #334155;
+    border: 1px solid var(--gold);
+    color: var(--accent-deep);
+    background: var(--gold-soft);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 0.66rem;
     font-weight: 700;
 }
+
+/* ---------- Content ---------- */
 
 .content {
     min-width: 0;
@@ -191,52 +238,57 @@ a:hover {
 
 .eyebrow {
     margin: 0 0 8px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #0a5952;
+    color: var(--gold);
 }
 
 h1, h2, h3 {
-    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
     line-height: 1.3;
     margin-top: 0;
+    color: var(--text);
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.05rem;
     margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 1.28rem;
+    font-size: 1.3rem;
     margin: 34px 0 12px;
+    color: var(--accent-deep);
 }
 
 h3 {
-    font-size: 1.05rem;
+    font-size: 1.06rem;
     margin: 0 0 8px;
 }
 
 p {
     margin: 0 0 14px;
-    color: #1f2937;
+    color: #3a2a33;
     max-width: 78ch;
 }
 
 .lead {
     font-size: 1.08rem;
-    color: #111827;
+    color: var(--text);
 }
 
 .research-question {
     margin-top: 14px;
     padding: 14px 16px;
     border-left: 4px solid var(--accent);
-    background: #f7fafb;
-    font-size: 1.05rem;
+    background: var(--accent-soft);
+    border-radius: 0 10px 10px 0;
+    font-size: 1.02rem;
 }
+
+/* ---------- Cards ---------- */
 
 .section-card {
     border: 1px solid var(--line);
@@ -244,12 +296,19 @@ p {
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 16px;
+    border-top: 3px solid transparent;
+    transition: border-color 0.18s ease;
+}
+
+.section-card:hover {
+    border-top-color: var(--accent);
 }
 
 .highlight-card {
-    border: 1px solid #73bbb0;
-    background: linear-gradient(180deg, #f2fbfa 0%, #ffffff 72%);
-    box-shadow: 0 8px 24px rgba(13, 121, 117, 0.08);
+    border: 1px solid #dcb9c9;
+    border-top: 3px solid var(--accent);
+    background: linear-gradient(180deg, #fdf4f8 0%, #ffffff 72%);
+    box-shadow: 0 8px 24px rgba(143, 29, 85, 0.08);
 }
 
 .flagship-header {
@@ -265,9 +324,9 @@ p {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #0a5952;
-    background: #dcf3ef;
-    border: 1px solid #a4d8cf;
+    color: var(--accent-deep);
+    background: var(--accent-soft);
+    border: 1px solid #dcaec4;
     border-radius: 999px;
     padding: 4px 10px;
 }
@@ -277,6 +336,10 @@ p {
     padding-left: 18px;
 }
 
+.inline-list li::marker {
+    color: var(--accent);
+}
+
 .meta {
     margin-top: 8px;
     color: var(--muted);
@@ -284,16 +347,26 @@ p {
 }
 
 .testimonial {
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--gold);
     padding: 10px 14px;
-    background: #f8fbfb;
+    background: var(--gold-soft);
+    border-radius: 0 10px 10px 0;
     margin: 12px 0;
-    color: #0f172a;
+    color: var(--text);
+    font-style: italic;
 }
 
 .cv-list {
     margin: 0;
     padding-left: 18px;
+}
+
+.cv-list li {
+    margin-bottom: 12px;
+}
+
+.cv-list li::marker {
+    color: var(--accent);
 }
 
 .footer-note {
@@ -313,10 +386,12 @@ p {
 }
 
 .pub-list li {
-    border-left: 3px solid #9ab6d8;
+    border-left: 3px solid var(--gold);
     padding: 8px 0 8px 12px;
-    color: #1f2937;
+    color: #3a2a33;
 }
+
+/* ---------- Responsive & preferences ---------- */
 
 @media (max-width: 980px) {
     .top-header-inner {
@@ -331,5 +406,11 @@ p {
 
     .sidebar {
         position: static;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }
