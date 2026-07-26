@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap");
 
 /* =========================================================
-   Palette: "Ink & Bougainvillea"
-   Deep plum ink, raspberry accent, brass-gold detail,
-   blush paper background. Colorful, feminine, strict.
+   Palette: "Gallery Oxblood"
+   Warm paper, near-black ink, one deep oxblood accent,
+   a whisper of ochre. Color used once, deliberately —
+   everything else stays quiet.
    ========================================================= */
 
 :root {
-    --bg: #faf6f5;            /* blush paper */
+    --bg: #fcfbf9;            /* warm paper, barely off-white */
     --panel: #ffffff;
-    --text: #29141f;          /* plum-black ink */
-    --muted: #6d5461;
-    --accent: #8f1d55;        /* deep raspberry-plum: primary */
-    --accent-deep: #661239;   /* hover / active */
-    --gold: #b07a1f;          /* brass-gold: secondary detail */
-    --accent-soft: #f7e3ec;   /* rose wash */
-    --gold-soft: #f6ecda;     /* gold wash */
-    --line: #e8d6dc;          /* rose hairline */
+    --text: #1d1a18;          /* warm near-black ink */
+    --muted: #6e6660;
+    --accent: #7c1f31;        /* oxblood — the one stroke of color */
+    --accent-deep: #55131f;   /* hover / active */
+    --accent-soft: #f7eff0;   /* faintest wine wash — active nav only */
+    --ochre: #96690f;         /* eyebrow labels only */
+    --line: #e6e1da;          /* warm hairline */
     --max-width: 1200px;
 }
 
@@ -36,20 +36,19 @@ html, body {
 a {
     color: var(--accent);
     text-decoration: none;
-    transition: color 0.18s ease;
+    transition: color 0.15s ease;
 }
 
 a:hover {
     color: var(--accent-deep);
     text-decoration: underline;
     text-underline-offset: 3px;
-    text-decoration-thickness: 1.5px;
+    text-decoration-thickness: 1px;
 }
 
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
-    border-radius: 4px;
 }
 
 /* ---------- Header ---------- */
@@ -62,7 +61,7 @@ a:hover {
 .top-header-inner {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 18px 24px 14px;
+    padding: 20px 24px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,45 +70,41 @@ a:hover {
 
 .site-mark {
     font-family: "Fraunces", Georgia, "Times New Roman", serif;
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     color: var(--text);
 }
 
 .top-links {
     display: flex;
-    gap: 22px;
+    gap: 26px;
     flex-wrap: wrap;
 }
 
 .top-links a {
     color: var(--muted);
-    font-size: 0.86rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
-.top-links a.active,
 .top-links a:hover {
-    color: var(--accent);
+    color: var(--text);
     text-decoration: none;
 }
 
 .top-links a.active {
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 2px;
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 3px;
 }
 
-/* Signature: two-voice ribbon — plum into gold */
+/* One thin, solid stroke — no gradient */
 .accent-line {
-    height: 4px;
-    background: linear-gradient(90deg,
-        var(--accent-deep) 0%,
-        var(--accent) 42%,
-        #c94f77 68%,
-        var(--gold) 100%);
+    height: 3px;
+    background: var(--accent);
 }
 
 /* ---------- Shell & grid ---------- */
@@ -117,29 +112,29 @@ a:hover {
 .site-shell {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 24px 24px 56px;
+    padding: 32px 24px 64px;
 }
 
 .page-grid {
     display: grid;
-    grid-template-columns: 285px 1fr;
-    gap: 52px;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
 }
 
 /* ---------- Sidebar ---------- */
 
 .sidebar {
     position: sticky;
-    top: 28px;
+    top: 32px;
     align-self: start;
     border: 1px solid var(--line);
     background: var(--panel);
-    border-radius: 14px;
-    padding: 24px 22px;
+    border-radius: 6px;
+    padding: 26px 24px;
 }
 
 .profile-wrap {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .profile-photo {
@@ -147,17 +142,15 @@ a:hover {
     height: 126px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--accent-soft);
-    outline: 1px solid var(--gold);
-    outline-offset: 3px;
+    border: 1px solid var(--line);
     display: block;
 }
 
 .sidebar h1 {
     margin: 0 0 6px;
     font-family: "Fraunces", Georgia, "Times New Roman", serif;
-    font-size: 1.9rem;
-    font-weight: 700;
+    font-size: 1.85rem;
+    font-weight: 600;
     line-height: 1.2;
     color: var(--text);
 }
@@ -165,62 +158,69 @@ a:hover {
 .sidebar .role {
     margin: 0 0 16px;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 0.94rem;
 }
 
 .sidebar-nav {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
     margin: 22px 0;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
 }
 
 .sidebar-nav a {
     display: block;
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: 7px 10px;
     color: var(--text);
     font-weight: 600;
+    border-left: 2px solid transparent;
 }
 
-.sidebar-nav a:hover,
-.sidebar-nav a.active {
-    background: var(--accent-soft);
-    color: var(--accent-deep);
+.sidebar-nav a:hover {
+    color: var(--accent);
     text-decoration: none;
 }
 
 .sidebar-nav a.active {
-    border-left: 3px solid var(--accent);
-    border-radius: 0 8px 8px 0;
+    border-left: 2px solid var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-deep);
 }
 
 .contact-list {
-    margin: 16px 0 0;
-    padding: 0;
+    margin: 18px 0 0;
+    padding: 14px 0 0;
+    border-top: 1px solid var(--line);
     list-style: none;
     display: grid;
-    gap: 8px;
-    font-size: 0.94rem;
+    gap: 9px;
+    font-size: 0.93rem;
 }
 
 .contact-list a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
+    color: var(--text);
+}
+
+.contact-list a:hover {
+    color: var(--accent);
 }
 
 .contact-list .icon {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    border: 1px solid var(--gold);
-    color: var(--accent-deep);
-    background: var(--gold-soft);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    background: transparent;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.66rem;
+    font-size: 0.62rem;
     font-weight: 700;
 }
 
@@ -231,60 +231,62 @@ a:hover {
 }
 
 .hero {
-    padding: 6px 0 18px;
+    padding: 4px 0 22px;
     border-bottom: 1px solid var(--line);
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 }
 
 .eyebrow {
-    margin: 0 0 8px;
-    font-size: 0.8rem;
+    margin: 0 0 10px;
+    font-size: 0.76rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--ochre);
 }
 
 h1, h2, h3 {
     font-family: "Fraunces", Georgia, "Times New Roman", serif;
-    line-height: 1.3;
+    line-height: 1.25;
     margin-top: 0;
     color: var(--text);
 }
 
 h1 {
-    font-size: 2.05rem;
-    margin-bottom: 10px;
+    font-size: 2.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 h2 {
-    font-size: 1.3rem;
-    margin: 34px 0 12px;
-    color: var(--accent-deep);
+    font-size: 1.28rem;
+    font-weight: 600;
+    margin: 40px 0 14px;
+    color: var(--text);
 }
 
 h3 {
     font-size: 1.06rem;
+    font-weight: 600;
     margin: 0 0 8px;
 }
 
 p {
     margin: 0 0 14px;
-    color: #3a2a33;
-    max-width: 78ch;
+    color: #33302d;
+    max-width: 74ch;
 }
 
 .lead {
-    font-size: 1.08rem;
+    font-size: 1.1rem;
     color: var(--text);
 }
 
 .research-question {
-    margin-top: 14px;
-    padding: 14px 16px;
-    border-left: 4px solid var(--accent);
-    background: var(--accent-soft);
-    border-radius: 0 10px 10px 0;
+    margin-top: 16px;
+    padding: 4px 0 4px 18px;
+    border-left: 3px solid var(--accent);
+    background: transparent;
     font-size: 1.02rem;
 }
 
@@ -293,22 +295,16 @@ p {
 .section-card {
     border: 1px solid var(--line);
     background: var(--panel);
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 6px;
+    padding: 22px 24px;
     margin-bottom: 16px;
-    border-top: 3px solid transparent;
-    transition: border-color 0.18s ease;
-}
-
-.section-card:hover {
-    border-top-color: var(--accent);
 }
 
 .highlight-card {
-    border: 1px solid #dcb9c9;
-    border-top: 3px solid var(--accent);
-    background: linear-gradient(180deg, #fdf4f8 0%, #ffffff 72%);
-    box-shadow: 0 8px 24px rgba(143, 29, 85, 0.08);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    background: var(--panel);
+    box-shadow: none;
 }
 
 .flagship-header {
@@ -320,15 +316,15 @@ p {
 }
 
 .flagship-badge {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-deep);
-    background: var(--accent-soft);
-    border: 1px solid #dcaec4;
-    border-radius: 999px;
-    padding: 4px 10px;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 3px 9px;
 }
 
 .inline-list {
@@ -341,18 +337,17 @@ p {
 }
 
 .meta {
-    margin-top: 8px;
+    margin-top: 10px;
     color: var(--muted);
-    font-size: 0.93rem;
+    font-size: 0.92rem;
 }
 
 .testimonial {
-    border-left: 4px solid var(--gold);
-    padding: 10px 14px;
-    background: var(--gold-soft);
-    border-radius: 0 10px 10px 0;
-    margin: 12px 0;
-    color: var(--text);
+    border-left: 3px solid var(--line);
+    padding: 4px 0 4px 18px;
+    background: transparent;
+    margin: 16px 0;
+    color: #33302d;
     font-style: italic;
 }
 
@@ -362,7 +357,7 @@ p {
 }
 
 .cv-list li {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .cv-list li::marker {
@@ -370,11 +365,11 @@ p {
 }
 
 .footer-note {
-    margin-top: 40px;
-    padding-top: 14px;
+    margin-top: 48px;
+    padding-top: 16px;
     border-top: 1px solid var(--line);
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .pub-list {
@@ -386,9 +381,9 @@ p {
 }
 
 .pub-list li {
-    border-left: 3px solid var(--gold);
-    padding: 8px 0 8px 12px;
-    color: #3a2a33;
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 14px;
+    color: #33302d;
 }
 
 /* ---------- Responsive & preferences ---------- */
@@ -401,7 +396,7 @@ p {
 
     .page-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 28px;
     }
 
     .sidebar {
